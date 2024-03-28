@@ -17,6 +17,7 @@ function mergeSort(arr) {
   return merge(left, right)
 }
 console.log(mergeSort([3, 5, 8, 5, 99, 1]))
+
 module.exports = {
   mergeSort
 }
