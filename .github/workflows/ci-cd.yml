@@ -9,7 +9,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node_version: [18.2.0, 16.17.0, 16.13.1]  # Specify the Node.js versions you want to test
+        node_version: [18.2.0, 16.17.0]  # Specify the Node.js versions you want to test
 
     runs-on: ubuntu-latest
 
