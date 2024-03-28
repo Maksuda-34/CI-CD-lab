@@ -60,7 +60,7 @@ describe('Insertion Sort', () => {
     test('returns an empty array if input array is empty', () => {
         const inputArray = [];
         const sortedArray = [];
-       
+        expect(insertionSort(inputArray)).toEqual(sortedArray);
     });
 });
 
