@@ -1,4 +1,3 @@
-
 name: CI/CD Pipeline
 
 on:
@@ -8,16 +7,20 @@ on:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        node_version: [18.2.0, 16.17.0, 16.13.1]  # Specify the Node.js versions you want to test
+
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Set up Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: ${{ matrix.node_version }}
 
       - name: Install dependencies
         run: npm install
@@ -25,4 +28,4 @@ jobs:
       - name: Run tests
         run: npm test
 
-      # Add deployment steps here if needed
+      
