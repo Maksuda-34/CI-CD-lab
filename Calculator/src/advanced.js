@@ -64,4 +64,10 @@ describe('Insertion Sort', () => {
     });
 });
 
+module.exports = {
+    pow,
+    modulo,
+    selectionSort,
+    insertionSort
+};
 
